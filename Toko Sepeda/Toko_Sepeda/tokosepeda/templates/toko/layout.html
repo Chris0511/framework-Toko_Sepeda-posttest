@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Toko Sepeda{% endblock %}</title>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'homepage' %}">TOKO SEPEDA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link{% if request.path == '/' %} active{% endif %}" href="{% url 'homepage' %}">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if request.path == '/about/' %} active{% endif %}" href="{% url 'about' %}">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Toko Sepeda. Semua Hak Dilindungi.</p>
+    </footer>
+  </body>
+</html>
