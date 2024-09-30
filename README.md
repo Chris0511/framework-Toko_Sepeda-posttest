@@ -16,6 +16,8 @@
 ![database toko sepeda](https://github.com/user-attachments/assets/4fd066f5-85dc-4070-9e76-c529ceba9212)
 
 # Posttest 3
+![Screenshot 2024-10-01 022801](https://github.com/user-attachments/assets/9ffe5e4f-77f5-44e7-98b6-349ad2525ab9)
+Kode ini menyempurnakan antarmuka admin Django dengan memungkinkan objek invoice dibuat dan diedit secara langsung dalam halaman admin order. Kode ini juga memastikan bahwa ketika invoice baru dibuat, total_amount-nya secara otomatis diatur agar sesuai dengan jumlah total Pesanan. Hal ini menjaga konsistensi antara dua model terkait dalam antarmuka admin.
 ![category](https://github.com/user-attachments/assets/18e232a4-abbb-4a6c-9451-8e00201470b3)
 ![product](https://github.com/user-attachments/assets/a50ae2ab-ed0d-4a8f-aae9-7a1845e8f9a9)
 ![orderitem](https://github.com/user-attachments/assets/e14f0816-e449-4dc9-86c6-22ec1229d8c9)
